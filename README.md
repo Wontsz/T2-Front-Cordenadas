@@ -1,6 +1,6 @@
 # T2-Front-Cordenadas
-T2 de Front-End
-Consulta de coordenadas latitude/longitude em função do nome de uma cidade
+T2 de Front-End do segundo semestre que
+consulta de coordenadas latitude/longitude em função do nome de uma cidade
 
 # Desenvolvido por:
 - Ana Carolina Joaquim Januário RA: 23.95014-5
