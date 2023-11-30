@@ -1,10 +1,13 @@
 # T2-Front-Cordenadas
-T2 de Front-End do segundo semestre que
-consulta coordenadas latitude/longitude em função do nome de uma cidade
+T2 de Front-End do segundo semestre em que
+consulta coordenadas latitude/longitude em função do nome de uma cidade e exibe o clima da regiao.
 
 # Desenvolvido por:
-- Ana Carolina Joaquim Januário RA: 23.95014-5
-- Fernanda Beatriz Teixeira Faria Calvano RA: 22.00368-0
-- João Pedro de Souza Cruz RA: 23.00057-0
-- Marcos Pedro Cheder RA: 23.00697-8
 - Mateus Canotilho Wontroba RA: 23.01189-0
+
+## É necessário executar:
+
+```
+npm install
+npm install axios
+```
