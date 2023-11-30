@@ -20,18 +20,28 @@ axios
     })
     .then(res => {
         //console.log('lista: \n' + res)
-        for (let prev of res){
+        for (let coord of res){
             console.log(`
-                ${new Date(prev.dt * 1000).toLocaleString()},
-                ${'minima: ' + prev.main.temp_min}\u00B0C,
-                ${'maxima: ' + prev.main.temp_max}\u00B0C,
-                ${'latitude: ' + lat},
-                ${'longitude: ' + lon}
+                ${'Local: ' + coord.name},
+                ${'Latitude: ' + coord.lat},
+                ${'Longitude: '+ coord.lon},   
             `)
         }
-        return res;
+        
+        const lat = coord.lat
+        const lon = coord.lon
+        const url2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appid}&lang=${lang}`
+
+        axios
+        .get(url2)
+        .then(res => {
+            return res.data
+        })
+        .then(res => {
+            console.log(`
+            ${'Sensaçao Térmica: ' + (res.main.feels_like - 273.15).toFixed(2)}\u00B0C
+            ${'Descriçao: ' + res.weather[0].description}
+            `)
+        })
     })
-    .then (res => {
-        const sub = res.filter(r => r.main.feels_like > 20);
-        console.log(sub.length + " previsões passaram de 20\u00B0C")
-    })
+        
