@@ -10,4 +10,5 @@ consulta coordenadas latitude/longitude em função do nome de uma cidade e exib
 ```
 npm install
 npm install axios
+node .\t2_front.js
 ```
